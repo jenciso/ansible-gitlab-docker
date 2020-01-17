@@ -1,0 +1,9 @@
+- name: gitlab | commons
+  remote_user: centos
+  hosts: gitlab
+  roles:
+    - common
+    - docker-ce
+    - firewalld
+    - join-win-ad
+    - firewalld

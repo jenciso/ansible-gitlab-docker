@@ -1,0 +1,7 @@
+- name: gitlab | server
+  remote_user: centos
+  hosts: gitlab
+  roles:
+    - gitlab
+  tags:
+    - gitlab

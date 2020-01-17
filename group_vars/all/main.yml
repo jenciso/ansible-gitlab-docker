@@ -1,0 +1,35 @@
+---
+## GENERAL
+proxy_enabled: false
+
+## SELINUX
+selinux_enabled: true
+selinux_mode: permissive
+
+## FIREWALL
+firewalld_disabled: false
+firewalld_rules:
+      ssh:
+        port: 22
+        protocol: tcp
+        state: enabled
+        zone: public
+        permanent: true
+      remote-ssh:
+        port: 2222
+        protocol: tcp
+        state: enabled
+        zone: public
+        permanent: true
+      http:
+        port: 80
+        protocol: tcp
+        state: enabled
+        zone: public
+        permanent: true
+      https:
+        port: 443
+        protocol: tcp
+        state: enabled
+        zone: public
+        permanent: true

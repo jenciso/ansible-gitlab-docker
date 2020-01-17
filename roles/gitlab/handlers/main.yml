@@ -1,0 +1,4 @@
+- name: restart gitlab
+  shell: "docker-compose -f docker-compose.yml up --force-recreate -d"
+  args:
+    chdir: /data/gitlab

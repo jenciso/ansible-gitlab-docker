@@ -1,0 +1,50 @@
+---
+- name: gitlab | create directory
+  file: path={{ item }} state=directory
+  with_items:
+    - /data/gitlab/config
+    - /data/gitlab/data
+    - /data/gitlab/logs
+
+
+- name: gitlab | create .env
+  lineinfile:
+    path: /data/gitlab/.env
+    regexp: '^COMPOSE_PROJECT_NAME='
+    state: present
+    create: yes
+    line: COMPOSE_PROJECT_NAME=gitlab
+
+
+- name: gitlab | copy docker-compose.yml
+  template:
+    src: docker-compose.yml
+    dest: /data/gitlab
+  notify: restart gitlab
+
+
+- name: gitlab | Copying gitlab.rb
+  template: 
+     src: gitlab.rb 
+     dest: /data/gitlab/config/gitlab.rb
+     mode: 0600
+  notify: restart gitlab
+
+
+- name: gitlab | create ssl-cert dir
+  file: path=/data/gitlab/config/ssl state=directory
+
+
+- name: gitlab | copyng ssl certificates
+  copy:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+  with_items:
+    - { src: "/etc/ansible/files/ssl-certs/{{ domain_company }}.crt", dest: "/data/gitlab/config/ssl/gitlab.{{ domain_company }}.crt" }
+    - { src: "/etc/ansible/files/ssl-certs/{{ domain_company }}.key", dest: "/data/gitlab/config/ssl/gitlab.{{ domain_company }}.key" }
+
+
+- name: gitlab | reconfigure
+  shell: "docker-compose -f docker-compose.yml up -d"
+  args:
+    chdir: /data/gitlab
