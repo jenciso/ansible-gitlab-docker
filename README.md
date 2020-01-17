@@ -6,6 +6,10 @@ Ansible playbook to provision gitlab docker version
 
 Provisionar via `kvm-provision`
 
+```
+./new-vm.sh -n gitlab -m 4096 -c 2 -i 192.168.122.41
+```
+
 ### PRE-INSTALL
 
 ```
@@ -20,5 +24,3 @@ ansible -m systemd -a "name=sshd state=restarted" -i inventory -e "ansible_port=
 ansible-playbook site-common.yml -i inventory
 ansible-playbook site.yml -i inventory
 ```
-
-
