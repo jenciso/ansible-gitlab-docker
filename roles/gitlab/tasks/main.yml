@@ -21,6 +21,8 @@
     src: docker-compose.yml
     dest: /data/gitlab
   notify: restart gitlab
+  tags:
+    - gitlab-config
 
 
 - name: gitlab | Copying gitlab.rb
@@ -29,6 +31,8 @@
      dest: /data/gitlab/config/gitlab.rb
      mode: 0600
   notify: restart gitlab
+  tags:
+    - gitlab-config
 
 
 - name: gitlab | create ssl-cert dir
