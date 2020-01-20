@@ -1,4 +1,4 @@
-{"version": 2, "width": 212, "height": 33, "timestamp": 1579287530, "env": {"SHELL": "/bin/bash", "TERM": "xterm-256color"}}
+{"version": 2, "width": 112, "height": 33, "timestamp": 1579287530, "env": {"SHELL": "/bin/bash", "TERM": "xterm-256color"}}
 [0.254915, "o", "\u001b[0;32m✔\u001b[0;0m \u001b[0;37m15:58:50 [lat3480i7]\u001b[0;0m \u001b[0;36mgitlab-docker\u001b[0;0m\u001b]0;~/ansible/playbooks/gitlab-docker\u0007 [\u001b[0;35mmaster\u001b[0;0m \u001b[0;36m…\u001b[0;0m1\u001b[0;0m\u001b[0;0m]\u001b[0;0m $ "]
 [3.42217, "o", "\r\n"]
 [3.519049, "o", "\u001b[0;32m✔\u001b[0;0m \u001b[0;37m15:58:53 [lat3480i7]\u001b[0;0m \u001b[0;36mgitlab-docker\u001b[0;0m\u001b]0;~/ansible/playbooks/gitlab-docker\u0007 [\u001b[0;35mmaster\u001b[0;0m \u001b[0;36m…\u001b[0;0m1\u001b[0;0m\u001b[0;0m]\u001b[0;0m $ "]
