@@ -37,4 +37,4 @@ ansible-playbook site.yml -i inventory
 
 ## DEMO
 
-![](./docs/demo.svg)
+![simulate](./docs/simulate.svg)
