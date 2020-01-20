@@ -24,3 +24,4 @@ ansible -m systemd -a "name=sshd state=restarted" -i inventory -e "ansible_port=
 ansible-playbook site-common.yml -i inventory
 ansible-playbook site.yml -i inventory
 ```
+
