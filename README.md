@@ -35,3 +35,6 @@ ansible-playbook site-common.yml -i inventory
 ansible-playbook site.yml -i inventory
 ```
 
+## DEMO
+
+![](./docs/demo.svg)
