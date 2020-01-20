@@ -22,7 +22,7 @@ gitlab_rails['ldap_servers'] = {
   'active_directory' => true,
   'base' => '{{ gitlab_ldap_base }}',
   'group_base' => '{{ gitlab_ldap_group_base }}',
-  'admin_group' => 'Global Admins'
+  'admin_group' => 'gitlab-admins'
   }
 }
 

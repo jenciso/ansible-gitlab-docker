@@ -1,7 +1,7 @@
 ---
 domain_company: enciso.website
 internal_domain_company: corp.enciso.website
-ad_administrator_password: 'NVSeW?UG=G'
-gitlab_active_directory: "win-ad-aws.enciso.website"
+ad_administrator_password: 'SuperSecret2012'
+gitlab_active_directory: "win-ad.enciso.website"
 gitlab_ldap_base: "OU=USERS,OU=CORE,DC=corp,DC=enciso,DC=website"
 gitlab_ldap_group_base: "OU=GROUPS,OU=CORE,DC=corp,DC=enciso,DC=website"
