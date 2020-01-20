@@ -33,3 +33,9 @@ firewalld_rules:
         state: enabled
         zone: public
         permanent: true
+      gitlab-registry:
+        port: 4567
+        protocol: tcp
+        state: enabled
+        zone: public
+        permanent: true

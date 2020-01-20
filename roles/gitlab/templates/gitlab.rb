@@ -31,3 +31,8 @@ gitlab_rails['gitlab_signup_enabled'] = true
 gitlab_rails['smtp_enable'] = true
 gitlab_rails['smtp_address'] = "relay.{{ internal_domain_company }}"
 gitlab_rails['smtp_port'] = 25
+
+registry['enable'] = true
+registry_external_url 'https://gitlab.enciso.website:4567'
+registry_nginx['ssl_certificate'] = "/etc/gitlab/ssl/gitlab.{{ domain_company }}.crt"
+registry_nginx['ssl_certificate_key'] = "/etc/gitlab/ssl/gitlab.{{ domain_company }}.key"
