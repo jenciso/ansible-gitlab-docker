@@ -1,4 +1,4 @@
-external_url "https://gitlab.{{ domain_company }}/"
+external_url "{{ gitlab_url }}"
 
 gitlab_rails['time_zone'] = 'America/Sao_Paulo'
 
