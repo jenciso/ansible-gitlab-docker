@@ -1,9 +1,11 @@
 ---
 domain_company: enciso.website
 internal_domain_company: corp.enciso.website
-ad_administrator_password: 'SuperSecret2012'
+ad_administrator_password: SuperSecret2012
 
-gitlab_url: "https://gitlab.{{ domain_company }}/"
+gitlab_url: "https://gitlab-lab.{{ domain_company }}/"
+gitlab_url_registry: "https://gitlab-lab.{{ domain_company }}:4567"
 gitlab_active_directory: "win-ad.enciso.website"
+gitlab_active_directory_port: 389
 gitlab_ldap_base: "OU=USERS,OU=CORE,DC=corp,DC=enciso,DC=website"
 gitlab_ldap_group_base: "OU=GROUPS,OU=CORE,DC=corp,DC=enciso,DC=website"

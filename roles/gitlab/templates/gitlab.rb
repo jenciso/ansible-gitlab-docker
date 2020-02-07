@@ -13,7 +13,7 @@ gitlab_rails['ldap_servers'] = {
 'main' => {
   'label' => 'Gitlab AD',
   'host' =>  '{{ gitlab_active_directory }}',
-  'port' => 389,
+  'port' => '{{ gitlab_active_directory_port }}',
   'uid' => 'sAMAccountName',
   'encryption' => 'plain',
   'verify_certificates' => false,
@@ -33,6 +33,6 @@ gitlab_rails['smtp_address'] = "relay.{{ internal_domain_company }}"
 gitlab_rails['smtp_port'] = 25
 
 registry['enable'] = true
-registry_external_url 'https://gitlab.enciso.website:4567'
+registry_external_url '{{ gitlab_url_registry }}'
 registry_nginx['ssl_certificate'] = "/etc/gitlab/ssl/gitlab.{{ domain_company }}.crt"
 registry_nginx['ssl_certificate_key'] = "/etc/gitlab/ssl/gitlab.{{ domain_company }}.key"
