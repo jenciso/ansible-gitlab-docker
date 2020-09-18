@@ -1,18 +1,18 @@
-## GITLAB
+## GITLAB SERVER
 
-Ansible playbook to provision a gitlab server running on docker
+This is an ansible playbook will create a gitlab server using docker-compose to running it.
 
-### PROVISION
+### Provision
 
-clone this [repo](https://github.com/jenciso/kvm-provision) to create a VM.
+Clone this [repo](https://github.com/jenciso/kvm-provision) and create a VM using this command:
 
 ```
 ./new-vm.sh -n gitlab -m 4096 -c 2 -i 192.168.122.41
 ```
 
-### PRE-INSTALL
+### Pre-install
 
-This step are needed to run our ssh server on TCP 2222. Gitlan will be use TCP 22
+We need to run these commands in order to run our sshd on TCP 2222. So, our gitlab server will be use the tcp port 22
 
 ```
 ansible -m lineinfile \
@@ -28,13 +28,9 @@ ansible -m systemd \
   -i inventory -e "ansible_port=22" gitlab -u centos
 ```
 
-### INSTALL
+### Install
 
 ```
-ansible-playbook site-common.yml -i inventory
+ansible-playbook site-common.yml -i inventory -e deploy_docker=true
 ansible-playbook site.yml -i inventory
 ```
-
-## DEMO
-
-![simulate](./docs/simulate.svg)

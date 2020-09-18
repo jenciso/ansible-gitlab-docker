@@ -1,2 +1,2 @@
 [gitlab]
-192.168.122.41 ansible_port=2222
+gitlab.docs-planet.site ansible_port=2222
